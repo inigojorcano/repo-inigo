@@ -1,4 +1,4 @@
-////////////////////////////////////////////////Ejercicio 1////////////////////////////////////////////////
+﻿////////////////////////////////////////////////Ejercicio 1////////////////////////////////////////////////
 pedir @numero1
 pedir @numero2
 
@@ -75,6 +75,29 @@ pedir @dia
 
 por cada @cosa en @listaMesesInvierno
 		mostrar @listaMesesInvierno[@cosa]
+
+////////////////////////////////////////////////Ejercicio 6 Javascript////////////////////////////////////////////////
+var porcentaje = 25;
+var precio = 100;
+mesesInvierno = ["Enero","Febrero","Noviembre","Diciembre"];
+dias = ["Lunes","Martes","Miercoles","Jueves"];
+var mesEscrito = prompt("Introduzca el mes");
+var diaEscrito = prompt("Introduzca el dia");
+
+while(true){
+  if(mesesInvierno.indexOf(mesEscrito) > -1){
+    if(dias.indexOf(diaEscrito) > -1){
+      var descuento = precio * porcentaje / 100;
+      var precioFinal = precio - descuento;
+      alert(precioFinal);
+      break;
+    }else{
+      diaEscrito = prompt("Introduzca correctamente el dia");
+    }
+  }else{
+    mesEscrito = prompt("Introduzca correctamente el mes");
+  }
+}
 
 ////////////////////////////////////////////////Ejercicio 7////////////////////////////////////////////////
 pedir @numero
