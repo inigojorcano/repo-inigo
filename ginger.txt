@@ -1,0 +1,122 @@
+////////////////////////////////////////////////Ejercicio 1////////////////////////////////////////////////
+pedir @numero1
+pedir @numero2
+
+@suma = @numero1 + @numero2
+@resta = @numero1 - @numero2
+@multiplicacion = @numero1 * @numero2
+@division = @numero1 / @numero2
+
+mostrar "Suma: " + @suma
+mostrar "Resta: " + @resta
+mostrar "Multiplicación: " + @multiplicacion
+mostrar "División: " + @division
+
+////////////////////////////////////////////////Ejercicio 2////////////////////////////////////////////////
+pedir @mujeres
+pedir @hombres
+pedir @total
+
+@porcentajeMujeres = @mujeres * 100 / @total
+@porcentajeHombres = @hombres * 100 / @total
+
+mostrar "Mujeres: " + @porcentajeMujeres
+mostrar "Hombres: " + @porcentajeHombres
+
+////////////////////////////////////////////////Ejercicio 3////////////////////////////////////////////////
+pedir @numero1
+pedir @numero2
+
+si @numero1 > @numero2
+	@resultado = "El número1 = " + @numero1 + " es mayor"
+pero si @numero1 < @numero2
+	@resultado = "El número2 = " + @numero2 + " es mayor"
+si no
+	@resultado = "Los dos números son iguales"
+
+mostrar "Resultado: " + @resultado
+
+////////////////////////////////////////////////Ejercicio 4////////////////////////////////////////////////
+pedir @numero1
+pedir @numero2
+pedir @numero3
+
+si @numero1 > @numero2 && @numero1 > @numero3
+	@resultado = "El número1 = " + @numero1 + " es mayor"
+pero si @numero2 > @numero1 && @numero2 > @numero3
+	@resultado = "El número2 = " + @numero2 + " es mayor"
+pero si @numero3 > @numero1 && @numero3 > @numero1
+	@resultado = "El número3 = " + @numero3 + " es mayor"
+si no
+	@resultado = "Ha petao"
+
+mostrar "Resultado: " + @resultado
+
+////////////////////////////////////////////////Ejercicio 5////////////////////////////////////////////////
+pedir @numero1
+pedir @numero2
+pedir @numero3
+
+si @numero1 < 0
+	@suma = @numero2 + @numero3
+	@resultado = "Se suman los dos números: " + @suma
+si no
+	@resultado = "Se multiplican los tres números: " + @numero1 * @numero2 * @numero3
+
+mostrar "Resultado: " + @resultado
+
+////////////////////////////////////////////////Ejercicio 6////////////////////////////////////////////////
+@precio = 100
+@porcentaje = 25
+@listaMesesInvierno = "Enero", "Febrero", "Noviembre", "Diciembre"
+pedir @mes
+pedir @dia
+
+
+por cada @cosa en @listaMesesInvierno
+		mostrar @listaMesesInvierno[@cosa]
+
+////////////////////////////////////////////////Ejercicio 7////////////////////////////////////////////////
+pedir @numero
+
+si @numero > 0
+	@resultado = "El " + @numero + " es positivo"
+pero si @numero < 0
+	@resultado = "El " + @numero + " es negativo"
+si no
+	@resultado = "El " + @numero + " es 0"
+
+mostrar @resultado
+
+////////////////////////////////////////////////Ejercicio 8////////////////////////////////////////////////
+pedir @numero
+
+si @numero % 2 === 0
+	@resultado = "El " + @numero + " es par"
+si no
+	@resultado = "El " + @numero + " es impar"
+
+mostrar @resultado
+
+////////////////////////////////////////////////Ejercicio 9////////////////////////////////////////////////
+@clave = "Fictizia mola mucho"
+pedir @pass
+
+@contador = 2
+repetir si @contador > 0 && @clave != @pass
+	@contador = @contador - 1
+	pedir @pass
+
+si @contador == 0  && @clave != @pass
+	mostrar "Error de acceso"
+si no
+	mostrar "Acceso correcto"
+
+
+
+
+
+
+
+
+
